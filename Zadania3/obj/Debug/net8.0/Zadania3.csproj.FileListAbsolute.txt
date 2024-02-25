@@ -1,0 +1,15 @@
+/workspaces/ZaawansowaneProgramowanie/Zadania3/bin/Debug/net8.0/Zadania3
+/workspaces/ZaawansowaneProgramowanie/Zadania3/bin/Debug/net8.0/Zadania3.deps.json
+/workspaces/ZaawansowaneProgramowanie/Zadania3/bin/Debug/net8.0/Zadania3.runtimeconfig.json
+/workspaces/ZaawansowaneProgramowanie/Zadania3/bin/Debug/net8.0/Zadania3.dll
+/workspaces/ZaawansowaneProgramowanie/Zadania3/bin/Debug/net8.0/Zadania3.pdb
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.AssemblyInfoInputs.cache
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.AssemblyInfo.cs
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.csproj.CoreCompileInputs.cache
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.sourcelink.json
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.dll
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/refint/Zadania3.dll
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.pdb
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/Zadania3.genruntimeconfig.cache
+/workspaces/ZaawansowaneProgramowanie/Zadania3/obj/Debug/net8.0/ref/Zadania3.dll
