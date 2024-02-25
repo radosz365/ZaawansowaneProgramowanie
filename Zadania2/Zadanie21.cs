@@ -1,8 +1,11 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Zadania2
 {
     public class Zadanie21
     {
-        string czesc(string n, string s)
+        public static string czesc(string n, string s)
         {
             return $"Cześć {n} {s}!";
         }
