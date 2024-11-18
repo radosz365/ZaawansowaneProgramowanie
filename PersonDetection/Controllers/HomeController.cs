@@ -1,31 +1,54 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PersonDetection.Models;
+using System.Diagnostics;
+using System.IO;
 
 namespace PersonDetection.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
     public IActionResult Index()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult GetPersonCount()
     {
-        return View();
+        string pythonScriptPath = Path.Combine(Directory.GetCurrentDirectory(), "PythonScripts", "person_counter.py");
+        string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "Images", "ti1p3.jpg");
+
+        int personCount = ExecutePythonScript(pythonScriptPath, imagePath);
+
+        return Json(new { count = personCount });
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    private int ExecutePythonScript(string scriptPath, string imagePath)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        try
+        {
+            ProcessStartInfo start = new ProcessStartInfo
+            {
+                FileName = "python3",
+                Arguments = $"\"{scriptPath}\" \"{imagePath}\"",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                CreateNoWindow = true
+            };
+
+            using (Process process = Process.Start(start))
+            {
+                using (StreamReader reader = process.StandardOutput)
+                {
+                    string result = reader.ReadToEnd();
+                    process.WaitForExit();
+                    return int.Parse(result.Trim());
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            return -1;
+        }
     }
 }

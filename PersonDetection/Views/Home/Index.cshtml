@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "PersonDetection";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<button id="detect_from_disk" class="inline-element">Detect from disk</button>
+<p id="result" class="inline-element"></p>
+
+@section Styles {
+    <style>
+        .inline-element {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#detect_from_disk").click(function () {
+                $("#result").text("Work in progress...");
+                
+                $.ajax({
+                    url: '/Home/GetPersonCount',
+                    type: 'GET',
+                    success: function (data) {
+                        $("#result").text("Number of people detected: " + data.count);
+                    },
+                    error: function () {
+                        $("#result").text("An error occurred while detecting people.");
+                    }
+                });
+            });
+        });
+    </script>
+}
