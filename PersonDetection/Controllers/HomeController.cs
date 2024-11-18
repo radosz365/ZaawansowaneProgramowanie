@@ -60,6 +60,35 @@ public class HomeController : Controller
         }
     }
 
+    [HttpPost]
+    public IActionResult UploadAndDetect(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+        {
+            return Json(new { count = -1, error = "No file uploaded" });
+        }
+
+        string pythonScriptPath = Path.Combine(Directory.GetCurrentDirectory(), "PythonScripts", "person_counter.py");
+        string tempImagePath = Path.Combine(Directory.GetCurrentDirectory(), "Images", "uploaded_image.jpg");
+
+        try
+        {
+            using (var stream = new FileStream(tempImagePath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+
+            int personCount = ExecutePythonScript(pythonScriptPath, tempImagePath);
+
+            System.IO.File.Delete(tempImagePath);
+
+            return Json(new { count = personCount });
+        }
+        catch (Exception ex)
+        {
+            return Json(new { count = -1, error = ex.Message });
+        }
+    }
 
     private int ExecutePythonScript(string scriptPath, string imagePath)
     {

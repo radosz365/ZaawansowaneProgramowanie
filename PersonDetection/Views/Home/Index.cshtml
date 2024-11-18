@@ -8,6 +8,14 @@
 <input type="text" id="image_url" class="inline-element" placeholder="Enter image URL" />
 <button id="detect_from_url" class="inline-element">Detect from URL</button>
 <p id="result_url" class="inline-element"></p>
+<br/><br/>
+<div>
+    <form id="upload_form" enctype="multipart/form-data">
+        <input type="file" id="file_input" name="file" class="inline-element" style="border: 1px solid black;" />
+        <button type="submit" id="upload_button" class="inline-element">Detect from file</button>
+        <p id="upload_result" class="inline-element"></p>
+    </form>
+</div>
 
 @section Styles {
     <style>
@@ -59,6 +67,30 @@
                     },
                     error: function () {
                         $("#result_url").text("An error occurred while detecting people.");
+                    }
+                });
+            });
+
+            $("#upload_form").submit(function (event) {
+                event.preventDefault();
+                
+                const formData = new FormData(this);
+                $("#upload_result").text("Work in progress...");
+                $.ajax({
+                    url: '/Home/UploadAndDetect',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        if (data.count >= 0) {
+                            $("#upload_result").text("Number of people detected: " + data.count);
+                        } else {
+                            $("#upload_result").text("Error: " + (data.error || "Unknown error"));
+                        }
+                    },
+                    error: function () {
+                        $("#upload_result").text("An error occurred while detecting people.");
                     }
                 });
             });
