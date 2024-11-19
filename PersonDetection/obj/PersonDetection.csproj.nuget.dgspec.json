@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj": {}
+    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/PersonDetection.csproj": {}
   },
   "projects": {
-    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj": {
+    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/PersonDetection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj",
+        "projectUniqueName": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/PersonDetection.csproj",
         "projectName": "PersonDetection",
-        "projectPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj",
+        "projectPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/PersonDetection.csproj",
         "packagesPath": "/Users/radek/.nuget/packages/",
-        "outputPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/obj/",
+        "outputPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/radek/.nuget/NuGet/NuGet.Config"
