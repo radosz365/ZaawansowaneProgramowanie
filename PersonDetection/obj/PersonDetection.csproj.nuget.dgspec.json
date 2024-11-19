@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/PersonDetection.csproj": {}
+    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj": {}
   },
   "projects": {
-    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/PersonDetection.csproj": {
+    "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/PersonDetection.csproj",
+        "projectUniqueName": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj",
         "projectName": "PersonDetection",
-        "projectPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/PersonDetection.csproj",
+        "projectPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/PersonDetection.csproj",
         "packagesPath": "/Users/radek/.nuget/packages/",
-        "outputPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/obj/",
+        "outputPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-2/PersonDetection/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/radek/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
