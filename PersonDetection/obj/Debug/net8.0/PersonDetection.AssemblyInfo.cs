@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonDetection")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd3c0497be2c05ad76f1158fea79b168cb0c304e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+726666224ecfc9ef59feedebfff84fdaa0f8f51e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonDetection")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonDetection")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
