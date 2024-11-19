@@ -122,11 +122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/PersonDetection.csproj",
+      "projectUniqueName": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/PersonDetection.csproj",
       "projectName": "PersonDetection",
-      "projectPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/PersonDetection.csproj",
+      "projectPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/PersonDetection.csproj",
       "packagesPath": "/Users/radek/.nuget/packages/",
-      "outputPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/obj/",
+      "outputPath": "/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/radek/.nuget/NuGet/NuGet.Config"

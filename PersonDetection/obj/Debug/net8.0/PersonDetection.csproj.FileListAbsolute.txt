@@ -132,3 +132,6 @@
 /Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/obj/Debug/net8.0/PersonDetection.pdb
 /Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/obj/Debug/net8.0/PersonDetection.genruntimeconfig.cache
 /Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie/PersonDetection/obj/Debug/net8.0/ref/PersonDetection.dll
+/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/obj/Debug/net8.0/PersonDetection.csproj.AssemblyReference.cache
+/Users/radek/Desktop/ZaawansowaneProgramowanie/ZaawansowaneProgramowanie-1/PersonDetection/obj/Debug/net8.0/PersonDe.24BF8139.Up2Date

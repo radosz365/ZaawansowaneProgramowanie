@@ -23,7 +23,13 @@ public class Consumer
 
     public void StartConsumer()
     {
-        var factory = new ConnectionFactory() { HostName = "localhost" };
+        var factory = new ConnectionFactory
+        {
+            HostName = "localhost",
+            RequestedHeartbeat = TimeSpan.FromSeconds(60),
+            AutomaticRecoveryEnabled = true,
+            NetworkRecoveryInterval = TimeSpan.FromSeconds(10)
+        };
 
         using (var connection = factory.CreateConnection())
         using (var channel = connection.CreateModel())
@@ -33,6 +39,8 @@ public class Consumer
                                         exclusive: false,
                                         autoDelete: false,
                                         arguments: null);
+
+            channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
             var consumer = new EventingBasicConsumer(channel);
 
@@ -54,8 +62,6 @@ public class Consumer
                     response.EnsureSuccessStatusCode();
 
                     var responseContent = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Endpoint response: {responseContent}");
-
                     using var document = JsonDocument.Parse(responseContent);
                     var personCount = document.RootElement.GetProperty("count").GetInt32();
 
@@ -74,7 +80,6 @@ public class Consumer
                     }
 
                     Console.WriteLine($"Task {taskId} completed. File saved: {filePath}");
-                    _processedTasks.Add(taskId);
                 }
                 catch (Exception ex)
                 {
@@ -91,10 +96,8 @@ public class Consumer
                                     autoAck: false,
                                     consumer: consumer);
 
-            while (_processedTasks.Count < _totalTasks)
-            {
-                Task.Delay(100).Wait();
-            }
+            Console.WriteLine("Waiting for messages. Press [enter] to exit.");
+            Console.ReadLine();
         }
     }
 

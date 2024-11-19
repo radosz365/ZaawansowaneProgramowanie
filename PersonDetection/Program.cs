@@ -45,8 +45,8 @@ static void RunRabbitMqTest()
 {
     Console.WriteLine("Starting RabbitMQ test...");
 
-    const int totalTasks = 10;
-    const int totalConsumers = 2;
+    const int totalTasks = 1000;
+    const int totalConsumers = 10;
 
     var processedTasks = new ConcurrentBag<string>();
 
